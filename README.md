@@ -15,12 +15,12 @@ Then, open web browser and type http://localhost:8000/ in the address bar. Now y
 
 - 🐱‍🐉 2D Java Platformer - Dino Game:
   - Used Java and OOP to create a replica of Chrome Dino Game.
-  - Implemented data structures, gravity & jumping physics, collision detection, and event handling.
+  - Implemented data structures, gravity & jumping physics, collision detection, event handling, GUI, and sound effects.
   - Added multiplayer mode, when two players can compete using one keyboard.
   - Added various power-ups, which affect the game experience (e.g double-jump and invincibility).
   - Offered creative solutions to UI and Algorithms.
   
-![Dino Game](https://i.imgur.com/KkjStM6.png)
+![Dino Game](https://i.imgur.com/lQINTK5.png)
  
  *Note*: To open the game, you need to use compiler (Preferably Eclipse) and run file named "MainApplication.java" located in
  ```
