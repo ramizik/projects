@@ -8,13 +8,14 @@ import acm.graphics.*;
 
 public class MainApplication extends GraphicsApplication implements ActionListener {
 
+	// constant variables
 	public static final int WINDOW_WIDTH = 600;
 	public static final int WINDOW_HEIGHT = 436;
 	public static final int GRAVITY_TIMER_MS = 200;
+	public static final int ARROW_KEY = 38;
+	public static final int W_KEY = 87;
 	public static final String MUSIC_FOLDER = "";	
 
-	public int windowWidth = 600;
-	public int windowHeight = 436;
 	public StartMenuPane mainMenu;
 	public PlayerManualPane manualMenu;
 	public SinglePlayerModePane singleMenu;
@@ -47,7 +48,6 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public void switchToManual() {
 		switchToScreen(manualMenu);
 		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
-
 	}
 
 	public void switchToSinglePlayer() {
@@ -97,9 +97,9 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 			}
 		}
 		else {
-			if (e.getKeyCode() == 38) {		
+			if (e.getKeyCode() == ARROW_KEY) {		
 				multiMenu.LevelOne.player.jump();
-			} else if (e.getKeyCode() == 87) {		
+			} else if (e.getKeyCode() == W_KEY) {		
 				multiMenu.LevelTwo.player.jump();
 			}
 		}

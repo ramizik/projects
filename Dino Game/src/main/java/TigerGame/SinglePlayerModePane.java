@@ -13,14 +13,11 @@ public class SinglePlayerModePane extends GraphicsPane {
 		LevelOne = new Level(program, false);
 	}
 	
-	
 	@Override
 	public void showContents() {
-		
 	}
 
 	@Override
 	public void hideContents() {
-
 	}
 }

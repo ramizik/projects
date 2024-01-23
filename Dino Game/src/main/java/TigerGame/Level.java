@@ -20,10 +20,11 @@ public class Level implements ActionListener  {
 	private ArrayList<Obstacle> obstacles;
 	private ArrayList<PowerUp> powers;
 	GImage backgroundImg = new GImage("images/blank_background.png");
+	int scaleY = 0;
 
 	public Level(MainApplication app, boolean secondPlayer) {
 		super();
-		int scaleY = 0;
+
 		if (secondPlayer == true) {
 			isSecond = true;
 			scaleY = 400;
@@ -31,6 +32,11 @@ public class Level implements ActionListener  {
 			isSecond = false;
 			scaleY = 0;
 		}
+		addElements(app);
+	}
+
+	// Improvement 1
+	public void addElements(MainApplication app) {
 		rgen = RandomGenerator.getInstance();
 		program = app;
 		program.add(backgroundImg, 0, 0 + scaleY);
@@ -84,12 +90,10 @@ public class Level implements ActionListener  {
 					stopAllTimersOnce();
 					// Show game over menu
 					program.switchToDeathScreenPane();
-					
 				}
 				if(obstacle.getX() + obstacle.getWidth() < 0) {
 					obstacles.remove(obstacle);
 					break;
-					
 				}
 			}
 		}
@@ -113,10 +117,13 @@ public class Level implements ActionListener  {
 				}
 			}
 		}
-		
 	}
 
 	public void stopAllTimersOnce() {
+		// Improvement 2
+		for(PowerUp power: powers) {
+			power.getPowerTimer().stop();
+		}
 		for(Obstacle obs: obstacles) {
 			obs.getObsMoveTimer().stop();
 		}
@@ -125,9 +132,6 @@ public class Level implements ActionListener  {
 		}
 		for(MapElement bush: bushes) {
 			bush.getObsMoveTimer().stop();
-		}
-		for(PowerUp power: powers) {
-			power.getPowerTimer().stop();
 		}
 		player.getGravityTimer().stop();
 		NewObstacleTimer.stop();
@@ -144,7 +148,6 @@ public class Level implements ActionListener  {
 	}
 	
 	public boolean isTwoPlayers() {
-		return 	isSecond;
+		return isSecond;
 	}
-
 }

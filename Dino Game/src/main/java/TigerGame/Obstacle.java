@@ -10,21 +10,23 @@ public class Obstacle implements ActionListener  {
 	public static final int OBSTACLE_HEIGHT = 90;
 	public static final int START_X = 600;
 	public static final int START_Y = 280;
-	private MainApplication program;
+	public static final int MOVE_SPEED = 5;
 	private ObstacleType obstacleType;
 	private double posX;
 	private double posY;
-	private double moveSpeed;
 	private GImage obsImage;
 	private Timer obsMoveTimer;
 	public SinglePlayerModePane gameWindow;
 	public RandomGenerator rgen;
 	
 	public Obstacle(MainApplication app, Level level) {
+		createNewObstacle(app, level);
+	}
+
+	// Improvement 1
+	public void createNewObstacle(MainApplication app, Level level) {
 		rgen = RandomGenerator.getInstance();
 		obsImage = randomizeObstacleImage();
-		program = app;
-		moveSpeed = 5;
 		posX = START_X;
 		if (level.isTwoPlayers() == false) {
 			posY = START_Y;
@@ -32,14 +34,13 @@ public class Obstacle implements ActionListener  {
 			posY = 400 + START_Y;
 		}
 		obsImage.move(posX, posY);
-		program.add(obsImage);
+		app.add(obsImage);
 		obsImage.setSize(OBSTACLE_WIDTH,OBSTACLE_HEIGHT);
 		obsMoveTimer = new Timer(15, this);
 		obsMoveTimer.start();
 	}
-
 	public void actionPerformed(ActionEvent e) {
-		obsImage.move(-moveSpeed, 0);
+		obsImage.move(-MOVE_SPEED, 0);
 	}
 	
 	// Generate random image for obstacle

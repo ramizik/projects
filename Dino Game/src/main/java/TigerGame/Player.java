@@ -12,6 +12,7 @@ import acm.graphics.GLabel;
 
 public class Player extends MainApplication implements ActionListener {
 
+	// Constant ints
 	public static final int TIGER_WIDTH = 100;
 	public static final int TIGER_HEIGHT = 60;
 	public static final int START_X = 20;
@@ -23,7 +24,6 @@ public class Player extends MainApplication implements ActionListener {
 	private AudioPlayer audio = AudioPlayer.getInstance();
 
 	private int jumpPower;
-	private int gravity;
 	public int playerScore;
 	private int secondJump;
 	private int fallingSpeed;
@@ -54,7 +54,6 @@ public class Player extends MainApplication implements ActionListener {
 		program = app;
 		playerScore = 0;
 		jumpPower = -38;
-		gravity = GRAVITY;
 		scoreLabel = new GLabel("Score is 0");
 		levelToAdd = level;
 		
@@ -141,18 +140,12 @@ public class Player extends MainApplication implements ActionListener {
 		
 		// Normal Jump with sound effect
 		if (isOnGround() && continueGame == true && doubleJump == false) 	{
-			fallingSpeed = jumpPower;
-			audio.playSound(MUSIC_FOLDER, "jump-arcade.mp3");
-			fall();
-			secondJump = 0;
-			//System.out.println("SJ " + secondJump);
+			normalJump();
 		}
 
 		// DoubleJump with sound effect
 		if (isOnGround() && continueGame == true && doubleJump == true) {
-			fallingSpeed = jumpPower;
-			audio.playSound(MUSIC_FOLDER, "jump-arcade.mp3");
-			fall();
+			doubleJump();
 		}
 
 		// DoubleJump when off ground
@@ -173,7 +166,7 @@ public class Player extends MainApplication implements ActionListener {
 		if (levelToAdd.isTwoPlayers() == false) {
 			if (tigerImage.getY() + fallingSpeed <= GROUND_Y) {
 				tigerImage.move(0, fallingSpeed); 
-				fallingSpeed = fallingSpeed + gravity;
+				fallingSpeed = fallingSpeed + GRAVITY;
 			}
 			else {
 				tigerImage.setLocation(START_X, START_Y);
@@ -181,13 +174,27 @@ public class Player extends MainApplication implements ActionListener {
 		} else {
 			if (tigerImage.getY() + fallingSpeed <= 400 + GROUND_Y) {
 				tigerImage.move(0, fallingSpeed); 
-				fallingSpeed = fallingSpeed + gravity;
+				fallingSpeed = fallingSpeed + GRAVITY;
 			}
 			else {
 				tigerImage.setLocation(START_X, 400 + START_Y);
 			}
 		}
 		
+	}
+	
+	// Improvement 1
+	public void normalJump() {
+		fallingSpeed = jumpPower;
+		audio.playSound(MUSIC_FOLDER, "jump-arcade.mp3");
+		fall();
+		secondJump = 0;
+	}
+	
+	public void doubleJump() {
+		fallingSpeed = jumpPower;
+		audio.playSound(MUSIC_FOLDER, "jump-arcade.mp3");
+		fall();
 	}
 	
 	public boolean isOnGround() {
