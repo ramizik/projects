@@ -11,7 +11,7 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public static final int WINDOW_WIDTH = 600;
 	public static final int WINDOW_HEIGHT = 436;
 	public static final int GRAVITY_TIMER_MS = 200;
-	public static final String MUSIC_FOLDER = "sounds";	
+	public static final String MUSIC_FOLDER = "";	
 
 	public int windowWidth = 600;
 	public int windowHeight = 436;

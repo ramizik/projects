@@ -6,7 +6,7 @@ public class StartMenuPane extends GraphicsPane {
 
     private MainApplication program;
 	private AudioPlayer audio = AudioPlayer.getInstance();
-	public static final String MUSIC_FOLDER = "sounds";
+	public static final String MUSIC_FOLDER = "";
     GImage background = new GImage("images/start_menu.png");
     GImage manualPage = new GImage("images/player_manual.png");
     // Button 1: Single-player

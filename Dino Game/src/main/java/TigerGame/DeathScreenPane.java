@@ -9,7 +9,7 @@ public class DeathScreenPane extends GraphicsPane {
     private MainApplication program;
     public boolean isTwoPlayer;
     private AudioPlayer audio = AudioPlayer.getInstance();
-    public static final String MUSIC_FOLDER = "sounds";	
+    public static final String MUSIC_FOLDER = "";	
     private GImage gameOver = new GImage("images/game-over.png");
     // button 1: try again
     public GRect but1 = new GRect(174,92,251,54);
