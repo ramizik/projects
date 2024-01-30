@@ -3,6 +3,7 @@ package TigerGame;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import acm.graphics.*;
 
@@ -15,6 +16,15 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public static final int ARROW_KEY = 38;
 	public static final int W_KEY = 87;
 	public static final String MUSIC_FOLDER = "";	
+	
+	public ArrayList<Sound> sounds = new ArrayList<Sound>() {
+		{
+			add(new Sound(SoundType.GAME));
+			add(new Sound(SoundType.JUMP));
+			add(new Sound(SoundType.MENU));
+			add(new Sound(SoundType.POWERUP));
+		}
+	};
 
 	public StartMenuPane mainMenu;
 	public PlayerManualPane manualMenu;
@@ -41,30 +51,32 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	}
 
 	public void switchToMainMenu() {
-		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
+		audio.playSound(MUSIC_FOLDER, "mainMenuSound.mp3");
 		switchToScreen(mainMenu);
 	}
 
 	public void switchToManual() {
-		switchToScreen(manualMenu);
-		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
+		switchToScreen(manualMenu);;
 	}
 
 	public void switchToSinglePlayer() {
 		singleMenu = new SinglePlayerModePane(this);
 		isTwoPlayers = false;
 		switchToScreen(singleMenu);
-		audio.playSound(MUSIC_FOLDER, "GMusic.mp3", true);
+		audio.stopSound(MUSIC_FOLDER, "mainMenuSound.mp3");
+		audio.playSound(MUSIC_FOLDER, "gameSound.mp3", true);
 	}
 
 	public void switchToMultiPlayer() {
 		multiMenu = new MultiPlayerMode(this);
 		isTwoPlayers = true;
 		switchToScreen(multiMenu);
-		audio.playSound(MUSIC_FOLDER, "GMusic.mp3", true);
+		audio.stopSound(MUSIC_FOLDER, "mainMenuSound.mp3");
+		audio.playSound(MUSIC_FOLDER, "gameSound.mp3", true);
 	}
 
 	public void switchToDeathScreenPane() {
+		audio.stopSound(MUSIC_FOLDER, "gameSound.mp3");
 		gameOverMenu = new DeathScreenPane(this, isTwoPlayers);
 		switchToScreen(gameOverMenu);
 	}
@@ -78,11 +90,9 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 			mainMenu.clickedAt(button);
 		} 
 		else if (curScreen == manualMenu) {
-			audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
 			manualMenu.clickedAt(button);
 		}
 		if (curScreen == gameOverMenu) { 
-			audio.pauseSound(MUSIC_FOLDER, "MMenu.mp3");
 			gameOverMenu.clickedAt(button);
 		} 
 	}

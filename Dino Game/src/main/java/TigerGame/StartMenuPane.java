@@ -27,8 +27,6 @@ public class StartMenuPane extends GraphicsPane {
 
     public void clickedAt(GObject objIn) {
         if (objIn == but1) {
-        	// Stop audio when playing single mode
-        	audio.stopSound(MUSIC_FOLDER, "MMenu.mp3");
             program.switchToSinglePlayer();
         } 
         else if(objIn == but3) {
@@ -36,8 +34,6 @@ public class StartMenuPane extends GraphicsPane {
             
         } 
         else if (objIn == but2) {
-        	// Stop audio when playing in multi-player mode
-    		audio.pauseSound(MUSIC_FOLDER, "MMenu.mp3");
         	program.switchToMultiPlayer();
         }
     }

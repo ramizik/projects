@@ -14,8 +14,7 @@ public class PlayerManualPane extends GraphicsPane {
         super();
         program = app;
         backButton.setLineWidth(0);
-		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
-
+		audio.playSound(MUSIC_FOLDER, "mainMenuSound.mp3");
     }
 
     public void clickedAt(GObject objIn) {

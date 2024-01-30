@@ -135,9 +135,6 @@ public class Player extends MainApplication implements ActionListener {
 	}
 
 	public void jump() {
-		//Jump Audio
-		audio.playSound(MUSIC_FOLDER, "jump-arcade.mp3");
-		
 		// Normal Jump with sound effect
 		if (isOnGround() && continueGame == true && doubleJump == false) 	{
 			normalJump();

@@ -2,7 +2,7 @@ package TigerGame;
 
 public enum PowerUpType {
 	
-ONEUP, DOUBLEJUMP, INVINCIBILITY, JEOPARDY;
+ONEUP, DOUBLEJUMP, INVINCIBILITY;
 	
 	public String toString() {
 		switch(this) {
@@ -12,5 +12,4 @@ ONEUP, DOUBLEJUMP, INVINCIBILITY, JEOPARDY;
 		}
 		return "n/a";
 	}
-	
 }
