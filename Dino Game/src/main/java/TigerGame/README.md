@@ -28,8 +28,16 @@ So pictures and images are properly stored in folders. I forgot to mention this 
 but the code changes actually are in Commit 1, please refer there. My next task is to add enum class and corresponding list
 
 
-Commit 3(TBD):
-Commit 4(TBD):
+Commit 3:
+I now created a list of sounds and created a class for sounds.
+Commit 4:
+I fixed the issues related to Audioplayer. No crashes anymore. It's now easier to read a code with new way of calling the sound effects.
+I also added new sounds in the game and took care of various conditions (Exit, change of the mode, death, etc.)
+
+
+
+
+
 Commit 5(TBD):
 Commit 6(TBD): The set of steps that demonstrates that the feature:
 

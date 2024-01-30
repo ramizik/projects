@@ -15,6 +15,11 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public static final int GRAVITY_TIMER_MS = 200;
 	public static final int ARROW_KEY = 38;
 	public static final int W_KEY = 87;
+	public static final int GAME = 0;
+	public static final int JUMP = 1;
+	public static final int MENU = 2;
+	public static final int POWERUP = 3;
+	
 	public static final String MUSIC_FOLDER = "";	
 	
 	public ArrayList<Sound> sounds = new ArrayList<Sound>() {
@@ -51,32 +56,33 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	}
 
 	public void switchToMainMenu() {
-		audio.playSound(MUSIC_FOLDER, "mainMenuSound.mp3");
+		audio.playSound(MUSIC_FOLDER, sounds.get(MENU).location(MENU));
 		switchToScreen(mainMenu);
 	}
 
 	public void switchToManual() {
-		switchToScreen(manualMenu);;
+		switchToScreen(manualMenu);
+		audio.playSound(MUSIC_FOLDER, sounds.get(MENU).location(MENU), true);
 	}
 
 	public void switchToSinglePlayer() {
 		singleMenu = new SinglePlayerModePane(this);
 		isTwoPlayers = false;
 		switchToScreen(singleMenu);
-		audio.stopSound(MUSIC_FOLDER, "mainMenuSound.mp3");
-		audio.playSound(MUSIC_FOLDER, "gameSound.mp3", true);
+		audio.stopSound(MUSIC_FOLDER, sounds.get(MENU).location(MENU));
+		audio.playSound(MUSIC_FOLDER, sounds.get(GAME).location(GAME), true);
 	}
 
 	public void switchToMultiPlayer() {
 		multiMenu = new MultiPlayerMode(this);
 		isTwoPlayers = true;
 		switchToScreen(multiMenu);
-		audio.stopSound(MUSIC_FOLDER, "mainMenuSound.mp3");
-		audio.playSound(MUSIC_FOLDER, "gameSound.mp3", true);
+		audio.stopSound(MUSIC_FOLDER, sounds.get(MENU).location(MENU));
+		audio.playSound(MUSIC_FOLDER, sounds.get(GAME).location(GAME), true);
 	}
 
 	public void switchToDeathScreenPane() {
-		audio.stopSound(MUSIC_FOLDER, "gameSound.mp3");
+		audio.stopSound(MUSIC_FOLDER, sounds.get(GAME).location(GAME));
 		gameOverMenu = new DeathScreenPane(this, isTwoPlayers);
 		switchToScreen(gameOverMenu);
 	}
