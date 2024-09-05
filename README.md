@@ -26,7 +26,7 @@ Features Implemented
 
 ![Searching Game](https://i.imgur.com/0ge0akD.png)
 
-My contribuion:
+My contribution:
   - 3D virtual environment in JavaScript;
   - Game Physics: Positional and directional lighting, procedural texturing, shading, player movement, point sprites, and game speed;
   - Game logic and winning condition;
@@ -40,6 +40,7 @@ Then, open web browser and type http://localhost:8000/ in the address bar. Now y
 ## Project №3: 2D Java Platformer - Dino Game:
 
 ![Dino Game](https://i.imgur.com/lQINTK5.png)
+
 My contribution:
   - Object-Oriented Programming in Java;
   - Mouse & Keyboard event handling;
