@@ -1,7 +1,8 @@
-# Personal projects
-- Full Stack Website
-- DORMIFY Website (https://dormstorm.netlify.app/)
-Dormify is a full-stack dorm app that compiles college dorm information into one place, allowing users to compare dorms easily and make an informed decision about the dorm they choose. This app is intended to make the entire process of selecting dorms easier for University of the Pacific students.
+# Completed Software Projects
+- Project №1 - Full Stack Website "Dormstorm"
+- Website: https://dormstorm.netlify.app/
+Dormstorm is a full-stack dorm app that compiles college dorm information into one place, allowing users to compare dorms easily and make an informed decision about the dorm they choose. This app is intended to make the entire process of selecting dorms easier for University of the Pacific students.
+![Dormstorm ](https://i.imgur.com/TJchUGk.png)
 
 ## Features Implemented
 1. **Housing Selection Page**
@@ -21,34 +22,33 @@ Dormify is a full-stack dorm app that compiles college dorm information into one
 4. **Contact Us Page:** in the case a user has a question that has not been answered yet in the FAQ page or otherwise need to contact the UOP housing department, they can do so in this page.
     - **Email Messaging:** this feature allows a user to send a message with their attached email to the college housing department from within the website itself.
 
-- 💻 "DOOM"-like WebGL game:
-## Features Implemented
-1. 3D virtual environment in JavaScript
-2. Positional and directional lighting, procedural texturing, shading, player movement, point sprites, and mouse input.
-3. Game logic and winning condition.
-  
+Project №2: "DOOM"-like WebGL FPS video-game
 ![Searching Game](https://i.imgur.com/0ge0akD.png)
+
+## My contribuion:
+  - 3D virtual environment in JavaScript;
+  - Game Physics: Positional and directional lighting, procedural texturing, shading, player movement, point sprites, and game speed;
+  - Game logic and winning condition;
 
 *Note*: To open application, you need to run a local webserver. For example, you can do it using python. Start webserver by typing next command to command line (Make sure that you're in same directory where application is located):
 ```
  > python -m http.server
 ```
 Then, open web browser and type http://localhost:8000/ in the address bar. Now you can open the mainPage.html to run the application.
- 
 
-- 🐱‍🐉 2D Java Platformer - Dino Game:
-  - Used Java and OOP to create a replica of Chrome Dino Game.
-  - Implemented data structures, gravity & jumping physics, collision detection, event handling, and sound effects.
-  - Added multiplayer mode, when two players can compete using one keyboard.
-  - Added various power-ups, which affect the gameplay experience (e.g double-jump and invincibility).
-  - Offered creative solutions to GUI and UX.
-  
+Project №3: 2D Java Platformer - Dino Game:
 ![Dino Game](https://i.imgur.com/lQINTK5.png)
- 
- *Note*: To open the game, you need to use compiler (Preferably Eclipse) and run file named "MainApplication.java" located in
- ```
- src/main/java/TigerGame/
- ```
+## My contribution:
+  - Object-Oriented Programming in Java;
+  - Mouse & Keyboard event handling;
+  - Gravity physics & collision detection;
+  - GUI & UX;
+  - Multiplayer mode & in-game powerups affecting the gameplay expierence;
+
+*Note*: To open the game, you need to use compiler (Preferably Eclipse) and run file named "MainApplication.java" located in
+```
+src/main/java/TigerGame/
+```
  
 - 👑 C#/C++ mini projects:
   - Practised and studied different programming concepts in C# and C++.
