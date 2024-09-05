@@ -1,8 +1,7 @@
 # Completed Software Projects
-## Project №1 - Full Stack Website "Dormstorm"
+## Project №1 - Full Stack Website "Dormstorm" (https://dormstorm.netlify.app/)
 
-- Website: https://dormstorm.netlify.app/
-Dormstorm is a full-stack dorm app that compiles college dorm information into one place, allowing users to compare dorms easily and make an informed decision about the dorm they choose. This app is intended to make the entire process of selecting dorms easier for University of the Pacific students.
+- Dormstorm is a full-stack dorm app that compiles college dorm information into one place, allowing users to compare dorms easily and make an informed decision about the dorm they choose. This app is intended to make the entire process of selecting dorms easier for University of the Pacific students.
 ![Dormstorm ](https://i.imgur.com/TJchUGk.png)
 
 Features Implemented
