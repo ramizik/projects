@@ -1,10 +1,10 @@
 # Completed Software Projects
-- Project №1 - Full Stack Website "Dormstorm"
+## Project №1 - Full Stack Website "Dormstorm"
 - Website: https://dormstorm.netlify.app/
 Dormstorm is a full-stack dorm app that compiles college dorm information into one place, allowing users to compare dorms easily and make an informed decision about the dorm they choose. This app is intended to make the entire process of selecting dorms easier for University of the Pacific students.
 ![Dormstorm ](https://i.imgur.com/TJchUGk.png)
 
-## Features Implemented
+Features Implemented
 1. **Housing Selection Page**
     - **Dorm Filtering:** the dorms displayed in the housing selection page can be filtered down based on the user's preferences.
         - Can filter based on the following dorm attributes:
@@ -22,10 +22,10 @@ Dormstorm is a full-stack dorm app that compiles college dorm information into o
 4. **Contact Us Page:** in the case a user has a question that has not been answered yet in the FAQ page or otherwise need to contact the UOP housing department, they can do so in this page.
     - **Email Messaging:** this feature allows a user to send a message with their attached email to the college housing department from within the website itself.
 
-Project №2: "DOOM"-like WebGL FPS video-game
+## Project №2: "DOOM"-like WebGL FPS video-game
 ![Searching Game](https://i.imgur.com/0ge0akD.png)
 
-## My contribuion:
+My contribuion:
   - 3D virtual environment in JavaScript;
   - Game Physics: Positional and directional lighting, procedural texturing, shading, player movement, point sprites, and game speed;
   - Game logic and winning condition;
@@ -36,9 +36,9 @@ Project №2: "DOOM"-like WebGL FPS video-game
 ```
 Then, open web browser and type http://localhost:8000/ in the address bar. Now you can open the mainPage.html to run the application.
 
-Project №3: 2D Java Platformer - Dino Game:
+## Project №3: 2D Java Platformer - Dino Game:
 ![Dino Game](https://i.imgur.com/lQINTK5.png)
-## My contribution:
+My contribution:
   - Object-Oriented Programming in Java;
   - Mouse & Keyboard event handling;
   - Gravity physics & collision detection;
